@@ -22,4 +22,4 @@ COPY . .
 
 RUN pm2 save
 
-CMD ["pm2-runtime", "zyren.js"]`
+CMD ["npm", "start"]`
