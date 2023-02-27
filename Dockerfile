@@ -1,4 +1,4 @@
-FROM node:16.10.0-buster
+FROM node:Its-buster
 
 RUN apt-get update && \
   apt-get install -y \
@@ -16,5 +16,6 @@ RUN npm install -g npm@8.1.3
 RUN npm install -g pm2
 RUN npm update
 COPY . .
+EXPOSE 5000
 RUN pm2 save
 CMD ["pm2-runtime", "zyren.js"]`
