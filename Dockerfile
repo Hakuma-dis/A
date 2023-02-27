@@ -16,10 +16,8 @@ COPY package.json .
 
 RUN npm install -g npm@8.1.3
 
-RUN npm install -g pm2
-
 COPY . .
 
-RUN pm2 save
+RUN npm start
 
 CMD ["npm", "start"]`
