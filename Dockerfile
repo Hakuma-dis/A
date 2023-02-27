@@ -12,9 +12,10 @@ RUN apt-get update && \
   mc -y \
 
 COPY package.json .
+
 RUN npm install -g npm@8.1.3
-RUN npm install -g pm2
-RUN npm update
+
 COPY . .
-RUN pm2 save
-CMD ["pm2-runtime", "zyren.js"]`
+
+RUN npm start
+CMD ["npm", "start"]`
