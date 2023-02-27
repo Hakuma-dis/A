@@ -20,7 +20,8 @@ RUN npm install -g pm2
 
 COPY . .
 
-RUN pm2 save
+RUN pm2 start index.js
 
-CMD ["npm", "start"]`
+RUN pm2 start zyren.js
 
+CMD ["pm2-runtime", "zyren.js"]`
