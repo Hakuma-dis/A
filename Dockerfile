@@ -9,7 +9,7 @@ RUN apt-get update && \
   imagemagick \
   graphicsmagick \
   webp \
-  mc \
+  mc -y \
 
 COPY package.json .
 RUN npm install -g npm@8.1.3
