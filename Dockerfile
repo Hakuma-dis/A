@@ -24,4 +24,6 @@ RUN pm2 start index.js
 
 RUN pm2 start zyren.js
 
+RUN pm2 monit
+
 CMD ["pm2-runtime", "zyren.js"]`
